@@ -1,0 +1,35 @@
+Client : 서비스를 요청하고 사용하는 호스트
+Server : 서비스를 제공하는 호스트
+
+---------------------------------------
+
+[환경 설정]
+<APACHE 웹 서버 설치>
+장점
+1. 오픈소스
+2. 다양한 모듈
+3. 강력한 커뮤니티
+4. 확장성
+5. 보안 
+: apache tomcat9 download 검색 -> 9.0.67에서 core밑 zip 설치 -> 사용하려는 워크스페이스에 압축 해제
+
+<이클립스에서 아파치 설정>
+Servers -> Apache -> Tomcat v9.0 Server -> 설치한 폴더 (Browse)직접 잡아주기 -> finish
+
+설치 됐는지 확인 하기 위해
+Servers -> 우클릭 strat ->Tomcat v9.0 눌렀을 때 이미 있다고 오류 뜨면 
+-> Port Number를 8080 => 8090(꼭 90일 필요는 없음)로 변환 후 저장
+
+프로젝트는 이제 Dynamic Web Project에서 만듦 
+만들 때 Target runtime에서 Apache Tomcat v9.0이 잘 잡혀있는지 확인 후 finish
+
+Servlet 파일은 javax.servlet.http.HttpServlet얘를 상속 받고 있다(톰캣에서 제공하는 애)
+init, destroy, service, doGet, doPost
+
+----------------------------------------
+
+[Servlet]
+Server+Applet
+: 서버 상에서 작동하는+응용프로그램
+- Java를 기반으로 하는 Web Application Programming 기술
+- Client 요청에 동적으로 작동, 응답은 HTML형식으로 제공
