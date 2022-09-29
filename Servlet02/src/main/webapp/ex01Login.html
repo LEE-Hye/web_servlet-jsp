@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인시 아이디 출력</title>
+<style>
+form {
+	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+</style>
+</head>
+<body>
+	<!-- 
+	새로운 프로젝트 생성할 때 마다 반드시 servers탭에 있는 server 화살표를 열어서 
+	이전에 실행시킨 프로젝트 삭제할 것!
+	why? 삭제하지 않으면 server가 실행될 때 마다 모든 프로젝트를 검사! 시간이 오래 걸림
+ 	-->
+
+	<!-- 
+	form method attribute : 데이터를 전송하는 방식 지정(get, post)
+	만약 지정하지 않는다면 기본값은 get방식이다!
+	 -->
+	<form action="Login" method="post">
+		<label for="#">ID : </label> <input type="text" name="id" placeholder="아이디를 입력하세요"> 
+		<label for="#">PW : </label> <input type="text" name="pw"> 
+		<input type="submit" value="login">
+	</form>
+</body>
+</html>
