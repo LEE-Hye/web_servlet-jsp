@@ -15,28 +15,28 @@ public class ex01Print extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// java main method ¿ªÇÒ
+		// java main method ì—­í• 
 		
-		// request : Å¬¶óÀÌ¾ðÆ® ¿äÃ»¿¡ ´ëÇÑ Á¤º¸°¡ µé¾îÀÖ´Â °´Ã¼
-		// response : ÀÀ´ä¿¡ ´ëÇÑ Á¤º¸°¡ µé¾îÀÖ´Â °´Ã¼
+		// request : í´ë¼ì´ì–¸íŠ¸ ìš”ì²­ì— ëŒ€í•œ ì •ë³´ê°€ ë“¤ì–´ìžˆëŠ” ê°ì²´
+		// response : ì‘ë‹µì— ëŒ€í•œ ì •ë³´ê°€ ë“¤ì–´ìžˆëŠ” ê°ì²´
 		
-		// ¡Ú¡Ú¡Ú¡Ú¡Ú ¿äÃ»ÀÌ µé¾î¿À¸é ¹Ýµå½Ã ÀÀ´äÇØÁà¾ßÇÑ´Ù ¡Ú¡Ú¡Ú¡Ú¡Ú
+		// â˜…â˜…â˜…â˜…â˜… ìš”ì²­ì´ ë“¤ì–´ì˜¤ë©´ ë°˜ë“œì‹œ ì‘ë‹µí•´ì¤˜ì•¼í•œë‹¤ â˜…â˜…â˜…â˜…â˜…
 		
-		// 2. ÇÑ±Û ÀÎÄÚµù Àâ¾ÆÁÖ±â ----> ¹Ýµå½Ã out °´Ã¼¸¦ »ý¼ºÇÏ±â Àü¿¡ ÀÎÄÚµù º¯°æÇØÁÖ±â
+		// 2. í•œê¸€ ì¸ì½”ë”© ìž¡ì•„ì£¼ê¸° ----> ë°˜ë“œì‹œ out ê°ì²´ë¥¼ ìƒì„±í•˜ê¸° ì „ì— ì¸ì½”ë”© ë³€ê²½í•´ì£¼ê¸°
 		response.setContentType("text/html;charset=euc-kr");
 		
-		// 1. À¥ÆäÀÌÁö Ãâ·Â
-		// 1-1) À¥ÆäÀÌÁö Ãâ·ÂÀ» µµ¿ÍÁÖ´Â µµ±¸ ²¨³»¿À±â
+		// 1. ì›¹íŽ˜ì´ì§€ ì¶œë ¥
+		// 1-1) ì›¹íŽ˜ì´ì§€ ì¶œë ¥ì„ ë„ì™€ì£¼ëŠ” ë„êµ¬ êº¼ë‚´ì˜¤ê¸°
 		PrintWriter out = response.getWriter();
 		
-		// 1-2 µµ±¸ »ç¿ëÇÏ±â
+		// 1-2 ë„êµ¬ ì‚¬ìš©í•˜ê¸°
 		out.print("<h1>hello world</h1>");
 		
-		// ¹Ýº¹¹®À» È°¿ëÇØ¼­ ÄÚµå¸¦ ¼öÁ¤
-		// ÆÀ¿ø ÀÌ¸§À» ÇÏ³ª·Î ¹­´Â ¹è¿­ »ý¼º
-		String [] names = {"½Å¸íÈ£","±è¸íÇö","ÀÌÇýºó","³ª¼Ò¿µ"};
+		// ë°˜ë³µë¬¸ì„ í™œìš©í•´ì„œ ì½”ë“œë¥¼ ìˆ˜ì •
+		// íŒ€ì› ì´ë¦„ì„ í•˜ë‚˜ë¡œ ë¬¶ëŠ” ë°°ì—´ ìƒì„±
+		String [] names = {"ì‹ ëª…í˜¸","ê¹€ëª…í˜„","ì´í˜œë¹ˆ","ë‚˜ì†Œì˜"};
 		
-		// ÆÀ¿ø ÀÌ¸§À» ¼ø¼­°¡ ¾ø´Â ¸®½ºÆ® ÇüÅÂ·Î Ãâ·Â
+		// íŒ€ì› ì´ë¦„ì„ ìˆœì„œê°€ ì—†ëŠ” ë¦¬ìŠ¤íŠ¸ í˜•íƒœë¡œ ì¶œë ¥
 		
 		out.print("<ul>");
 		for(int i = 0; i< names.length;i++) {

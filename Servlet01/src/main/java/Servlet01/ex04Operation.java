@@ -9,39 +9,39 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 @WebServlet("/Operation")
 public class ex04Operation extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		// ex05Operation.html ÆÄÀÏ¿¡¼­ºÎÅÍ
-		// µ¥ÀÌÅÍ¸¦ ¹Ş¾Æ¿Í¼­(input ÅÂ±× 2°³, select 1°³)
-		// console Ãâ·Â!
-		
+	protected void service(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		// ex05Operation.html íŒŒì¼ì—ì„œë¶€í„°
+		// ë°ì´í„°ë¥¼ ë°›ì•„ì™€ì„œ(input íƒœê·¸ 2ê°œ, select 1ê°œ)
+		// console ì¶œë ¥!
+
 		int fir = Integer.parseInt(request.getParameter("first"));
 		String op = request.getParameter("op");
 		int sec = Integer.parseInt(request.getParameter("second"));
-		
-		System.out.println("Ã¹ ¹øÂ° ¼ıÀÚ : " + fir + "\n¿¬»êÀÚ : " + op + "\nµÎ ¹øÂ° ¼ıÀÚ : " +sec);
-		System.out.println("¿¬»ê °á°ú : " + fir + op + sec + " = ?");
-		
+
+		System.out.println("ì²« ë²ˆì§¸ ìˆ«ì : " + fir + "\nì—°ì‚°ì : " + op + "\në‘ ë²ˆì§¸ ìˆ«ì : " + sec);
+		System.out.println("ì—°ì‚° ê²°ê³¼ : " + fir + op + sec + " = ?");
+
 		response.setContentType("text/html;charset=euc-kr");
-		
+
 		PrintWriter out = response.getWriter();
 
-		// switch¹®Àº ==·Î ºñ±³ÇÏ´Âµ¥ StringÇüÅÂ´Â .equals·Î ºñ±³ÇØ¼­ switch¹® »ç¿ë ºÒ°¡
-		
-		out.print("ÀÔ·ÂÇÑ ¿¬»ê °á°ú : ");
+		// switchë¬¸ì€ ==ë¡œ ë¹„êµí•˜ëŠ”ë° Stringí˜•íƒœëŠ” .equalsë¡œ ë¹„êµí•´ì„œ switchë¬¸ ì‚¬ìš© ë¶ˆê°€
+
+		out.print("ì…ë ¥í•œ ì—°ì‚° ê²°ê³¼ : ");
 		out.print(fir + op + sec + " = ");
-		if(op.equals("+")) {
+		if (op.equals("+")) {
 			out.print(fir + sec);
-		}else if(op.equals("-")){
+		} else if (op.equals("-")) {
 			out.print(fir - sec);
-		}else if(op.equals("*")) {
+		} else if (op.equals("*")) {
 			out.print(fir * sec);
-		}else if(op.equals("/")) {
+		} else if (op.equals("/")) {
 			out.print(fir / sec);
 		}
 	}

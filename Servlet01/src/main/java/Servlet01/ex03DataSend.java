@@ -16,14 +16,14 @@ public class ex03DataSend extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		response.setContentType("text/html;charset=euc-kr");
+	response.setContentType("text/html;charset=euc-kr");
 		
-		// 1. ¿äÃ»¹ŞÀº µ¥ÀÌÅÍ ²¨³»¿À±â
+		// 1. ìš”ì²­ë°›ì€ ë°ì´í„° êº¼ë‚´ì˜¤ê¸°
 		String id = request.getParameter("id");
-		// ÆĞ½º¿öµå ²¨³»¿À±â
+		// íŒ¨ìŠ¤ì›Œë“œ êº¼ë‚´ì˜¤ê¸°
 		String pw = request.getParameter("pw");
 		
-		// 2. È­¸é¿¡ h2ÅÂ±× È°¿ëÇØ¼­ id¿Í pw Ãâ·Â!
+		// 2. í™”ë©´ì— h2íƒœê·¸ í™œìš©í•´ì„œ idì™€ pw ì¶œë ¥!
 		PrintWriter out = response.getWriter();
 		out.print("<h2>");
 		out.print("id : " + id);
@@ -31,13 +31,13 @@ public class ex03DataSend extends HttpServlet {
 		out.print("pw : "+ pw);
 		out.print("</h2>");
 		
-		// 3. id°¡ smhrd pw°¡ 12345¿Í ÀÏÄ¡ÇÏ¸é 
-		//	  ·Î±×ÀÎ ¼º°ø! Ãâ·Â
-		// ±×·¸Áö ¾ÊÀº °æ¿ì ¾ÆÀÌµğ¿Í ºñ¹Ğ¹øÈ£¸¦ È®ÀÎÇÏ¼¼¿ä!
+		// 3. idê°€ smhrd pwê°€ 12345ì™€ ì¼ì¹˜í•˜ë©´ 
+		//	  ë¡œê·¸ì¸ ì„±ê³µ! ì¶œë ¥
+		// ê·¸ë ‡ì§€ ì•Šì€ ê²½ìš° ì•„ì´ë””ì™€ ë¹„ë°€ë²ˆí˜¸ë¥¼ í™•ì¸í•˜ì„¸ìš”!
 		if(id.equals("smhrd")&& pw.equals("12345")) {
-			out.print("·Î±×ÀÎ ¼º°ø!");
+			out.print("ë¡œê·¸ì¸ ì„±ê³µ!");
 		}else {
-			out.print("¾ÆÀÌµğ ºñ¹Ğ¹øÈ£¸¦ È®ÀÎÇÏ¼¼¿ä!");
+			out.print("ì•„ì´ë”” ë¹„ë°€ë²ˆí˜¸ë¥¼ í™•ì¸í•˜ì„¸ìš”!");
 		}
 	}
  

@@ -8,38 +8,38 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-// 1. Url Mapping : url °£·«È­ °¡´É, º¸¾È
+//1. Url Mapping : url ê°„ëžµí™” ê°€ëŠ¥, ë³´ì•ˆ
 @WebServlet("/Create")
 public class ex00Create extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    // 2. UID : Å¬·¡½º ÆÄÀÏÀÌ ÄÄÆÄÀÏµÇ´Â °úÁ¤¿¡¼­ servlet ¸í½ÃÇÏ´Â ID ¿ªÇÒ ----> Áö¿öµµ »ó°ü ¾øÁö¸¸, °¡²û ¿¹¿Ü»óÈ²(¿¹·¯)ÀÌ ¹ß»ýÇÏ¹Ç·Î ±×´ë·Î µÎ±â
+	// 2. UID : í´ëž˜ìŠ¤ íŒŒì¼ì´ ì»´íŒŒì¼ë˜ëŠ” ê³¼ì •ì—ì„œ servlet ëª…ì‹œí•˜ëŠ” ID ì—­í•  ----> ì§€ì›Œë„ ìƒê´€ ì—†ì§€ë§Œ, ê°€ë” ì˜ˆì™¸ìƒí™©(ì˜ˆëŸ¬)ì´ ë°œìƒí•˜ë¯€ë¡œ ê·¸ëŒ€ë¡œ ë‘ê¸°
     
 	
-	// 3. ±âº» »ý¼ºÀÚ
-    public ex00Create() {
-        super();
-        System.out.println("»ý¼ºÀÚ È£Ãâ");
-    }
+		// 3. ê¸°ë³¸ ìƒì„±ìž
+	    public ex00Create() {
+	        super();
+	        System.out.println("ìƒì„±ìž í˜¸ì¶œ");
+	    }
 
-    // 4. ÃÊ±âÈ­ ¸Þ¼Òµå
-	public void init(ServletConfig config) throws ServletException {
-		System.out.println("Servlet ÃÊ±âÈ­");
-	}
+	    // 4. ì´ˆê¸°í™” ë©”ì†Œë“œ
+		public void init(ServletConfig config) throws ServletException {
+			System.out.println("Servlet ì´ˆê¸°í™”");
+		}
 
-	// 5. °´Ã¼ ¼Ò¸ê ¸Þ¼Òµå
-	public void destroy() {
-		System.out.println("Servlet ¼Ò¸ê");
-	}
+		// 5. ê°ì²´ ì†Œë©¸ ë©”ì†Œë“œ
+		public void destroy() {
+			System.out.println("Servlet ì†Œë©¸");
+		}
 
-	// 6. ¿äÃ»ÀÌ µé¾î¿ÔÀ» ¶§, ½ÇÇàµÇ´Â ¸Þ¼Òµå(¼­ºñ½ºÁ¦°ø)
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("service È£Ãâ");
-	}
+		// 6. ìš”ì²­ì´ ë“¤ì–´ì™”ì„ ë•Œ, ì‹¤í–‰ë˜ëŠ” ë©”ì†Œë“œ(ì„œë¹„ìŠ¤ì œê³µ)
+		protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+			System.out.println("service í˜¸ì¶œ");
+		}
 
-	// 7. ¿äÃ»¹æ½Ä¿¡ µû¶ó ½ÇÇàµÇ´Â ¸Þ¼Òµå(get¹æ½Ä, post¹æ½Ä) ----> ¿ì¸®´Â service ÇÏ³ª·Î ¹­¾î¼­ »ç¿ë
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	}
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	}
+		// 7. ìš”ì²­ë°©ì‹ì— ë”°ë¼ ì‹¤í–‰ë˜ëŠ” ë©”ì†Œë“œ(getë°©ì‹, postë°©ì‹) ----> ìš°ë¦¬ëŠ” service í•˜ë‚˜ë¡œ ë¬¶ì–´ì„œ ì‚¬ìš©
+		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		}
+		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		}
 
 }
