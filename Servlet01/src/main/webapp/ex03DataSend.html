@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+lable {
+	width: 20px;
+}
+
+input {
+	margin: 5px;
+}
+</style>
+<meta charset="EUC-KR">
+<title>servlet 수업</title>
+</head>
+<body>
+	<!-- servlet으로 데이터 전송하기 -->
+	<!-- 데이터 전송 3가지 조건 : 어디로(action), 어떤값(name), 언제(submit) -->
+	<form action="DataSend">
+		<div>
+			<label for='id'>ID</label><input type='text' id='id' name = 'id'>
+		</div>
+		<div>
+			<label for='pw'>PW</label><input type='password' id='pw' name = 'pw'>
+		</div>
+		<input type="submit" value = '전송'>
+
+	</form>
+</body>
+</html>
