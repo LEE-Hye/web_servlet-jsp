@@ -9,12 +9,10 @@
 <body>
 
 	<%
-		// id수집
-		String id = request.getParameter("id");
+		int a = 10;
+		int b = 5;
+		out.print(a+b);
 	%>
-	<fieldset>
-		<h2><%=id %>님 환영합니다</h2>
-		<a href="ex06Login.html">로그아웃</a>
-	</fieldset>
+
 </body>
 </html>
