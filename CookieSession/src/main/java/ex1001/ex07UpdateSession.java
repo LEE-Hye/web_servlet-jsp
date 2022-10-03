@@ -22,9 +22,10 @@ public class ex07UpdateSession extends HttpServlet {
 		session.setAttribute("str", "스마트 인재 캠퍼스");
 		
 		// 세션에 저장된 데이터 삭제
-		// .removeAttribute("세션이름");
 		// 세션은 값이 없으면 무조건 null을 돌려주게 되어 있다.
+		// .removeAttribute("세션이름");
 		session.removeAttribute("list");
+		
 //		session.invalidate(); -> 얘도 삭제하는 앤데 데이터를 삭제하는게 아닌 세션자체를 없애버림
 		
 		response.sendRedirect("ex06showSession.jsp");
