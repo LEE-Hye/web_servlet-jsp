@@ -1,0 +1,23 @@
+모델(Model) : 애플리케이션의 정보, 데이터 ex) vo, dto
+뷰(View) : 사용자가 보게 도리 결과 화면 출력 ex) jsp, html
+컨트롤러(Controller) : 사용자의 입력 처리와 흐름 제어 담당
+
+MVC란 ? 세 영역으로 구분하고 영역간 결합도를 최소화
+
+모델 : 실행에 직접적인 관여x 
+	  데이터를 담거나(DTO, VO), 데이터를 보내거나, 수정, 삭제(DAO)하는 객체
+	  
+컨트롤러 : 애플리케이션의 행위를 정의
+		 Logic결과에 따라 적절한 View를 선택하여 응답
+		 (response 할 수 있던 Servlet과 jsp)
+		 
+뷰 : Model 데이터를 기반으로 실제 사용자에게 보여지는 페이지(html, jsp)
+
+Model1 : JSP에서 출력과 로직을 전부 컨트롤
+Model2 : JSP에서는 출력만 처리(로직은 Servlet)
+
+
+MyBatis 프레임워크
+- Java코드와 SQL쿼리를 자동으로 연결해주는 프레임워크(mapping기능)
+- SQL쿼리를 XML파일로 분리
+- JDBC코드 간결하게 사용가능
