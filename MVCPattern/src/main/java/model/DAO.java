@@ -26,4 +26,19 @@ public class DAO {
 		
 		return row;
 	}
+	
+	public AiMember login(AiMember vo) {
+		
+		// 1) sqlsession 만들기
+		SqlSession sqlSession = sqlSessionFactory.openSession(true);
+		
+		// 2) mapper 쿼리문 실행
+		// 하나의 값만 조회 : selectOne(mapper식별자, 매개변수),
+		// 여러개의 값 조회 : selectList(mapper식별자, 매개변수(생략가능))
+		AiMember resultVo = sqlSession.selectOne("model.DAO.login", vo);
+		
+		// 3) 결과값 반환
+		return resultVo;
+		
+	}
 }

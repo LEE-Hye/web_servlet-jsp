@@ -39,6 +39,7 @@ public class AiMember {
 		this.age = age;
 	}
 	
+
 	
 	
 }

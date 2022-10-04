@@ -7,11 +7,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Controller 역할</title>
+<title>Join Controller 역할</title>
 </head>
 <body>
 
-	<h1>Controller 역할!</h1>
+	<h1>Join Controller 역할!</h1>
 	
 	<%
 		// 1. (post로 보내와서 깨질 수 있으니) 한글 인코딩 잡아주기

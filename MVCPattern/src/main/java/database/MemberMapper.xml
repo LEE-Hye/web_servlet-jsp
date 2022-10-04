@@ -17,6 +17,20 @@
 	 -->
 	<insert id="join" parameterType="model.AiMember">
 		insert into aimember
-		values(${id},${pw},${name},${age})
+		values(#{id},#{pw},#{name},#{age})
 	</insert>
+	
+	<!-- select구문 사용할 때 돌려줘야 하는 결과값이 기본 자료형이 아니라면
+		반드시 resultType attribute를 명시해야한다.
+	 -->
+	<select id="login" resultType="model.AiMember" parameterType="model.AiMember">
+		select * from aimember 
+		where id=#{id} and pw=#{pw} 
+	</select>
+	<!-- resultType의 작동 원리 :
+		1) AiMember member = new AiMember();
+			기본 생성자를 사용해서 객체 생성
+		2) 결과값을 setter 메소드를 사용해서 바인딩 시킨다.
+		주의할 점 : 우리가 만든 사용자 정의 자료형에 기본 생성자가 없다면, error 발생
+	 -->
 </mapper>
