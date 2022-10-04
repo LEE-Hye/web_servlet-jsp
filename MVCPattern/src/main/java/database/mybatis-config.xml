@@ -35,7 +35,9 @@
       </dataSource>
     </environment>
   </environments>
+  
+  <!-- SQL구문이 있는 mapper 파일 연결시킬 것 -->
   <mappers>
-    <mapper resource="org/mybatis/example/BlogMapper.xml"/>
+    <mapper resource="database/MemberMapper.xml"/>
   </mappers>
 </configuration>

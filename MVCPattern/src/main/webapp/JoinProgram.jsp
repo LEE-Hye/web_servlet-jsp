@@ -1,3 +1,4 @@
+<%@page import="java.lang.ProcessBuilder.Redirect"%>
 <%@page import="model.DAO"%>
 <%@page import="model.AiMember"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -36,15 +37,20 @@
 		// 서로 다른 클래스 파일간의 값을 주고 받으려면 매개변수와 리턴 타입을 활용해야 한다.
 		// JoinProgram.jsp --vo값을 전달--> DAO
 		//					dao.join(vo)
-		dao.join(vo);
+		int result = dao.join(vo);
+		
+		// 6. 흐름 제어
+		if(result > 0){
+			// Main.jsp 이동
+			response.sendRedirect("Main.jsp");
+		}else{
+			// Join.jsp 이동
+			response.sendRedirect("Join.jsp");
+		}
 	
 	%>
 	
 	
-	<h3><%=id %></h3>
-	<h3><%=pw %></h3>
-	<h3><%=name %></h3>
-	<h3><%=age %></h3>
 
 </body>
 </html>

@@ -17,6 +17,6 @@
 	 -->
 	<insert id="join" parameterType="model.AiMember">
 		insert into aimember
-		values(?,?,?,?)
+		values(${id},${pw},${name},${age})
 	</insert>
 </mapper>

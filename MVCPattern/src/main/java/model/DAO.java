@@ -15,14 +15,15 @@ public class DAO {
 	
 	
 	// 2) 데이터베이스에 수행하고 싶은 기능 정의하기
-	public void join(AiMember vo) {
+	public int join(AiMember vo) {
 		// 3) SqlSession 만들어주기
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
 		// openSession(true) ----> auto commit(insert, delete, update)
 		
 		// 4) session을 활용해서 mapper안에 있는 기능을 수행
 		// sqlSession.insert(mapper 식별자.sql문 id값, mapper파일에 보내줄 데이터
-		sqlSession.insert("model.DAO.join", vo);
+		int row = sqlSession.insert("model.DAO.join", vo);
 		
+		return row;
 	}
 }
