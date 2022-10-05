@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper와 관련된 태그를 사용할 수 있는 dtd부터 항상 설정하기 -->
+
+<!-- mapper 파일은 여러개가 될 수 있다.
+	namespace : mapper 파일을 식별할 수 있는 고유의 식별자 값(절대 겹치면 안됨)
+	namespace에는 내가 연결하고 싶은 DAO 풀 네임을 적어주자!
+	 -->  
+<mapper namespace="model.DAO">
+
+	<!-- SQL구문 작성하는 공간 -->
+	<!-- DAO와 xml은 서로 다른 확장자
+		값을 주고 받으려면 xml안에 
+		정확하게 매개변수 명, 결과 자료형 지정
+	 -->
+	<insert id="join" parameterType="model.AiMember">
+		insert into aimember
+		values(#{id},#{pw},#{name},#{age})
+	</insert>
+	
+	<!-- select구문 사용할 때 돌려줘야 하는 결과값이 기본 자료형이 아니라면
+		반드시 resultType attribute를 명시해야한다.
+	 -->
+	<select id="login" resultType="model.AiMember" parameterType="model.AiMember">
+		select * from aimember 
+		where id=#{id} and pw=#{pw} 
+	</select>
+	<!-- resultType의 작동 원리 :
+		1) AiMember member = new AiMember();
+			기본 생성자를 사용해서 객체 생성
+		2) 결과값을 setter 메소드를 사용해서 바인딩 시킨다.
+		주의할 점 : 우리가 만든 사용자 정의 자료형에 기본 생성자가 없다면, error 발생
+	 -->
+</mapper>
