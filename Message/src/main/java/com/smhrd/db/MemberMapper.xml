@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper와 관련된 태그를 사용할 수 있는 dtd부터 항상 설정하기 -->
+
+<!-- mapper 파일은 여러개가 될 수 있다.
+	namespace : mapper 파일을 식별할 수 있는 고유의 식별자 값(절대 겹치면 안됨)
+	namespace에는 내가 연결하고 싶은 DAO 풀 네임을 적어주자!
+	 -->  
+<mapper namespace="com.smhrd.model.DAO">
+
+	<insert id="join" parameterType="com.smhrd.model.WebMember">
+		insert into web_member
+		values(#{email},#{pw},#{tel},#{address})
+	</insert>
+
+</mapper>

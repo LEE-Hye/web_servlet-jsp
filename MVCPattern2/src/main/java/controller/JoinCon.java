@@ -49,6 +49,7 @@ public class JoinCon extends HttpServlet {
 		if(result > 0){
 			
 			// 6-1) request영역에 id값 저장하기
+			// forward 방식을 쓰려면 set으로 보내줘야 해
 			request.setAttribute("id", id);
 			
 			// 6-2) forward방식 활용해서 Login.jsp이동
