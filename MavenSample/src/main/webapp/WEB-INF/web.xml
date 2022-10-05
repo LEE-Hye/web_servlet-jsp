@@ -1,0 +1,8 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<!-- MavenSample Project에 대한 전반적인 설명을 담을 수 있는 배치 기술자 -->
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+</web-app>
