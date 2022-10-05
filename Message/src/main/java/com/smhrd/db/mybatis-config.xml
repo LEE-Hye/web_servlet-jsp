@@ -11,6 +11,17 @@
   
   
 <configuration>
+
+	<typeAliases>
+	<!--
+		사용자 정의 자료형의 풀네임이 너무 길었을 때 별칭을 부여할 수 있다.
+		ex) com.smhrd.model.WebMember >>> WebMember
+	-->	
+	
+		<typeAlias type="com.smhrd.model.WebMember" alias="WebMember"/>
+	</typeAliases>
+
+
 <!-- 2) database 연결과 관련된 정보를 기술하는 곳 -->
   <environments default="development">
   <!-- default라는 건 : environment의 id값을 기준으로 잡아주는 것

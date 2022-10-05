@@ -15,4 +15,24 @@
 		values(#{email},#{pw},#{tel},#{address})
 	</insert>
 
+
+	<!--
+	 	parameterType은 Type이 String이 올 것이다
+		resultType은 select된 데이터를 반환할 그릇을 마련
+	 -->
+	<select id = "login" parameterType="com.smhrd.model.WebMember" resultType="com.smhrd.model.WebMember">
+		select * from web_member
+		where email=#{email} and pw=#{pw}
+	</select>
+	
+	<!--
+		parameterType은 매개변수가 없어서 필요없어 
+		resultType은 List<E> E안에 들어갈 애를 적어줘야 함
+		resultType = "com.smhrd.model.WebMember"라고 적어줘야 하는데
+		mybatis-config에서 타입 알리아스를 줬기 때문에 WebMember만 적어줘도 된다
+	-->
+	<select id="selectAll" resultType="WebMember">
+		select * from web_member
+		where email != 'admin'
+	</select>
 </mapper>
