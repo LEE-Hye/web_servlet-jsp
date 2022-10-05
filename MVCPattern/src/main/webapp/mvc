@@ -21,3 +21,8 @@ MyBatis 프레임워크
 - Java코드와 SQL쿼리를 자동으로 연결해주는 프레임워크(mapping기능)
 - SQL쿼리를 XML파일로 분리
 - JDBC코드 간결하게 사용가능
+
+
+
+getattribute : session
+getparameter : form으로 받아온 값 사용
