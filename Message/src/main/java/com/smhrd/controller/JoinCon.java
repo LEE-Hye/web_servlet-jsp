@@ -12,11 +12,11 @@ import javax.servlet.http.HttpServletResponse;
 import com.smhrd.model.DAO;
 import com.smhrd.model.WebMember;
 
-@WebServlet("/JoinCon")
-public class JoinCon extends HttpServlet {
-	private static final long serialVersionUID = 1L;
 
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+public class JoinCon implements Command {
+	// 인터페이스 받으면서 서블릿이 더이상 아니게 됐다.
+
+	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		// 1. post방식으로 보내왔기 때문에 한글 인코딩 잡아주기
 		request.setCharacterEncoding("UTF-8");

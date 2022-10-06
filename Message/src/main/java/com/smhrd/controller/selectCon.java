@@ -13,11 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import com.smhrd.model.DAO;
 import com.smhrd.model.WebMember;
 
-@WebServlet("/selectCon")
-public class selectCon extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+public class selectCon implements Command {
 
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		// 1. DAO 생성
 		DAO dao = new DAO();

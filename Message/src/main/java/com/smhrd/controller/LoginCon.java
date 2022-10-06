@@ -11,11 +11,9 @@ import javax.servlet.http.HttpSession;
 import com.smhrd.model.DAO;
 import com.smhrd.model.WebMember;
 
-@WebServlet("/LoginCon")
-public class LoginCon extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+public class LoginCon implements Command {
 
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		// 1. post방식이니 한글 인코딩 잡아주기
 		request.setCharacterEncoding("UTF-8");
