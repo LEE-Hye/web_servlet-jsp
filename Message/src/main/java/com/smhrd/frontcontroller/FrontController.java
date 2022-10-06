@@ -14,6 +14,7 @@ import com.smhrd.controller.Command;
 import com.smhrd.controller.JoinCon;
 import com.smhrd.controller.LoginCon;
 import com.smhrd.controller.LogoutCon;
+import com.smhrd.controller.MainCon;
 import com.smhrd.controller.selectCon;
 
 // --> url pattern이 .do로 끝나는 모든 요청 url을 처리하겠다.
@@ -39,6 +40,7 @@ public class FrontController extends HttpServlet {
 		map.put("LoginCon.do", new LoginCon());
 		map.put("LogoutCon.do", new LogoutCon());
 		map.put("selectCon.do", new selectCon());
+		map.put("*.do", new MainCon());
 	}
 	
 	

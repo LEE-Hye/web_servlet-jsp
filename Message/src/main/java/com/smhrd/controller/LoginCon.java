@@ -1,6 +1,8 @@
 package com.smhrd.controller;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -38,7 +40,8 @@ public class LoginCon implements Command {
 			HttpSession session = request.getSession();	
 			session.setAttribute("login", resultVO);
 			
-			response.sendRedirect("main.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/main.jsp");
+			rd.forward(request, response);
 	}
 
 }

@@ -31,7 +31,11 @@
 							<li>회원가입을 축하합니다.</li>
 							<!-- request영역에 저장된 회원정보 중 이메일을 출력하시오. -->
 							<li>메세지시스템의 새로운 이메일은 <%=email %>입니다.</li>
-							<li><button onclick='location.href="main.jsp"'>시작하기</button></li>
+							<li><button onclick='location.href="*.do"'>시작하기</button></li>
+							<!--
+								무조건 jsp를 들리려면 frontcontroller를 거쳐야만 갈 수 있게 만들었기때문에
+								*.do로 가야한다
+							-->
 						</ul>
 					</nav>			
 			</div>

@@ -48,11 +48,13 @@ public class JoinCon implements Command {
 		// 조건 - 회원가입 성공한 email값을 가지고 forward방식으로 이동!
 		if(row > 0) {
 			
-			RequestDispatcher rd = request.getRequestDispatcher("join_success.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/join_success.jsp");
 			
 			request.setAttribute("email", email);
 			
 			rd.forward(request, response);
+			// 다 포워드 방식으로 바꾼 이유가 WEB-INF 폴더가 보안 폴더라 리다이렉트가 안된다.
+
 		}
 		
 	}

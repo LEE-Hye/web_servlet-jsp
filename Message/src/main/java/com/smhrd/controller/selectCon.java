@@ -33,7 +33,7 @@ public class selectCon implements Command {
 		request.setAttribute("list", list);
 		
 		// 4. select.jsp로 forward방식으로 이동
-		RequestDispatcher rd = request.getRequestDispatcher("select.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/select.jsp");
 		rd.forward(request, response);
 	}
 
